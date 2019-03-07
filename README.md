@@ -53,7 +53,7 @@ https://gitforwindows.org/
 
   8. Click Add SSH key.
 
-### Basic Workflow With an Existing Repository ###
+### Basic Workflow Tasks ###
   - Clone a repository (Clone with SSH)
       1. In github.com on the main page of the project you'd like to clone, click on the green 'Clone or download' button and copy the 'Clone with SSH' url to the clipboard.
 
@@ -64,16 +64,21 @@ https://gitforwindows.org/
 
   - Create a new repository on the command line:
     ```
-      echo "# setting-up-git" >> README.md
-      git init
-      git add README.md
-      git commit -m "first commit"
-      git remote add origin git@github.com:dev-srcs/setting-up-git.git
-      git push -u origin master
+      $ echo "# setting-up-git" >> README.md
+      $ git init
+      $ git add README.md
+      $ git commit -m "first commit"
+      $ git remote add origin git@github.com:dev-srcs/setting-up-git.git
+      $ git push -u origin master
     ```
 
   - Push an existing repository from the command line
     ```
-      git remote add origin git@github.com:dev-srcs/setting-up-git.git
-      git push -u origin master
+      $ git remote add origin git@github.com:dev-srcs/setting-up-git.git
+      $ git push -u origin master
+    ```
+
+  - See local changes and what (if any) have been staged for commit:
+    ```
+      $ git status
     ```
