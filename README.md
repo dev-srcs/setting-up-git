@@ -8,7 +8,8 @@ https://gitforwindows.org/
   1. Open Git Bash
 
   2. Generate key-pair (public and private keys):
-  ```$ ssh-keygen -t rsa -b 4096 -C "your_email@srcs.org"
+  ```
+  $ ssh-keygen -t rsa -b 4096 -C "your_email@srcs.org"
   ```
 
   3. When you're prompted to "Enter a file in which to save the key," press Enter.
@@ -57,9 +58,9 @@ https://gitforwindows.org/
   - Clone a repository (Clone with SSH)
       1. In github.com on the main page of the project you'd like to clone, click on the green 'Clone or download' button and copy the 'Clone with SSH' url to the clipboard.
 
-      2. In a Git Bash terminal, cd to a directory you want your cloned project to live, then with an ssh-agent running and your private key added to the agent, run the clone command:
+      2. In a Git Bash terminal, cd to a directory where you want your cloned project to live, then with an ssh-agent background process running and your private key added to the agent, run the command:
       ```
-      $ git clone <repository-url>
+      $ git clone <github-repository-url>
       ```
 
   - Create a new repository on the command line:
@@ -68,17 +69,17 @@ https://gitforwindows.org/
       $ git init
       $ git add README.md
       $ git commit -m "first commit"
-      $ git remote add origin git@github.com:dev-srcs/setting-up-git.git
+      $ git remote add origin <github-repository-url>
       $ git push -u origin master
     ```
 
   - Push an existing repository from the command line
     ```
-      $ git remote add origin git@github.com:dev-srcs/setting-up-git.git
+      $ git remote add origin <github-repository-url>
       $ git push -u origin master
     ```
 
-  - See local changes and what (if any) have been staged for commit:
+  - See list of modified files and what (if any) have been staged for commit:
     ```
       $ git status
     ```
