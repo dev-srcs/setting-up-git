@@ -1,4 +1,4 @@
-#### Setting up Git Bash on Windows ####
+## Git Bash on Windows: Set Up and Basic Usage
 
 ### 1. Install Git for Windows ###
 
