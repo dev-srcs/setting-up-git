@@ -92,13 +92,13 @@ https://gitforwindows.org/
 
   - Grab the latest version of project from remote repository.  If you have made
     any local commits and not pushed them yet, you may need to merge. If you have
-    staged ('added') files but not committed them you will first need to commit
-    them or revert the changes before you can pull.
+    staged ('added') files but not committed, you will first need to do a commit
+    or revert the changes before you can pull.
     ```
       $ git pull
     ```
 
-  - See list of modified files and what (if any) have been staged for commit:
+  - See list of locally modified files and what (if any) have been staged for commit:
     ```
       $ git status
     ```
