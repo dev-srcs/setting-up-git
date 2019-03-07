@@ -18,7 +18,7 @@ https://gitforwindows.org/
   4. At the prompt, just hit enter (no passphrase).
 
 ### 3. Add SSH key to ssh-agent ###
-#### NOTE: this step needs to done each time you open a new Git Bash terminal window ###
+#### NOTE: this step needs to done each time you open a new Git Bash terminal window
   1. Start an ssh-agent background process:
   ```
     $ eval $(ssh-agent -s)
@@ -62,45 +62,55 @@ https://gitforwindows.org/
       ```
         $ git clone <github-repository-url>
       ```
-  - After cloning project, change into the project root directory.  Within your
-    project root directory there is a hidden folder '.git' which contains all the
+  - After cloning project, to begin working, change into the project root directory.  
+    Within your project root directory there is a hidden folder '.git' which contains all the
     repository configuration as well as full local copy of repository.
     ```
-      $ cd myproject
+      $ cd /path/to/<myproject-folder>
     ```
 
-  - Create a new repository on the command line:
-    ```
-      $ echo "# setting-up-git" >> README.md
-      $ git init
-      $ git add README.md
-      $ git commit -m "first commit"
-      $ git remote add origin <github-repository-url>
-      $ git push -u origin master
-    ```
+  - Create a new github repository:
+      1. Log into your account on github.com and create a new project.  Do not
+         initialize the repository with a README and do not add a .gitignore (yet).
+
+      2. Create directory with same name as your newly created project.
+         This will be your project root folder. cd into the directory and
+         run these command:
+
+      ```
+        $ echo "# setting-up-git" >> README.md
+        $ git init
+        $ git add README.md
+        $ git commit -m "first commit"
+        $ git remote add origin <github-repository-url>
+        $ git push -u origin master
+      ```
+      3. You may also need to add a .gitignore file to tell git to ignore certain
+         files and directories. Example:
+          ```
+            /.gradle/
+            /bin/
+            build/
+            *.pdf
+            *.csv
+            *.properties
+            *.exe
+          ```
 
   - Push an existing repository from the command line
     ```
       $ git remote add origin <github-repository-url>
       $ git push -u origin master
     ```
-  - Add a .gitignore file to list file types or directories to exclude from version control.
-    Example:
-    ```
-      /.gradle/
-      /bin/
-      build/
-      *.pdf
-      *.csv
-      *.properties
-      *.exe
-    ```
 
   - Grab the latest version of project from remote repository.  If you have made
     any local commits and not pushed them yet, you may need to merge. If you have
     staged ('added') files but not committed, you will first need to do a commit
     or revert the changes before you can pull.
+    #### NOTE: all the basic commands that follow are best executed from your
+               project root folder.
     ```
+      $ cd /path/to/<project-root-folder>
       $ git pull
     ```
 
