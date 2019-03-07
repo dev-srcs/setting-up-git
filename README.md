@@ -62,6 +62,12 @@ https://gitforwindows.org/
       ```
         $ git clone <github-repository-url>
       ```
+  - After cloning project, change into the project root directory.  Within your
+    project root directory there is a hidden folder '.git' which contains all the
+    repository configuration as well as full local copy of repository.
+    ```
+      $ cd myproject
+    ```
 
   - Create a new repository on the command line:
     ```
