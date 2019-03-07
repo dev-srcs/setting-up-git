@@ -21,23 +21,23 @@ https://gitforwindows.org/
 #### NOTE: this step needs to done each time you open a new Git Bash terminal window ###
   1. Start an ssh-agent background process:
   ```
-  $ eval $(ssh-agent -s)
+    $ eval $(ssh-agent -s)
   ```
 
   2. Add your private key to the agent:
   ```
-  $ ssh-add ~/.ssh/id_rsa
+    $ ssh-add ~/.ssh/id_rsa
   ```
 
   3. Verify your key has been added to running agent:
   ```
-  $ ssh-add -l
+    $ ssh-add -l
   ```
 
   ### 4. Add your SSH public key to your GitHub account. ###
   1. Still within Git Bash terminal, copy your public SSH key to the clipboard:
   ```
-  clip < ~/.ssh/id_rsa.pub
+    clip < ~/.ssh/id_rsa.pub
   ```
 
   2. Log into your github.com account.
@@ -60,7 +60,7 @@ https://gitforwindows.org/
 
       2. In a Git Bash terminal, cd to a directory where you want your cloned project to live, then with an ssh-agent background process running and your private key added to the agent, run the command:
       ```
-      $ git clone <github-repository-url>
+        $ git clone <github-repository-url>
       ```
 
   - Create a new repository on the command line:
@@ -78,8 +78,47 @@ https://gitforwindows.org/
       $ git remote add origin <github-repository-url>
       $ git push -u origin master
     ```
+  - Add a .gitignore file to list file types or directories to exclude from version control.
+    Example:
+    ```
+      /.gradle/
+      /bin/
+      build/
+      *.pdf
+      *.csv
+      *.properties
+      *.exe
+    ```
+
+  - Grab the latest version of project from remote repository.  If you have made
+    any local commits and not pushed them yet, you may need to merge. If you have
+    staged ('added') files but not committed them you will first need to commit
+    them or revert the changes before you can pull.
+    ```
+      $ git pull
+    ```
 
   - See list of modified files and what (if any) have been staged for commit:
     ```
       $ git status
+    ```
+
+  - Stage files for commit. List individually or use wildcard:
+    ```
+      $ git add <file>
+    ```
+
+  - Commit changes with message describing changes:
+    ```
+      $ git commit -m "some message"
+    ```
+
+  - Push your commit(s) to remote repository:
+    ```
+       $ git push -u origin master
+    ```
+
+  - For additional commands:
+    ```
+      $ git help
     ```
