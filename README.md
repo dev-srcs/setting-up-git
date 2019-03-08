@@ -19,6 +19,8 @@ https://gitforwindows.org/
 
 ### 3. Add SSH key to ssh-agent ###
 #### NOTE: this step needs to done each time you open a new Git Bash terminal window
+#### See here about installing a script to do this automatically:
+     [How to auto-launch ssh-agent](https://help.github.com/en/articles/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-git-for-windows)
   1. Start an ssh-agent background process:
   ```
     $ eval $(ssh-agent -s)
